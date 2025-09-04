@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — SkillToScaleUp</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page">
+  <main class="auth-card">
+    <div style="text-align:center;margin-bottom:18px;">
+      <div class="brand-icon" aria-hidden="true" style="margin:0 auto;">
+        <svg viewBox="0 0 24 24" width="32" height="32" fill="white" stroke="white" stroke-width="2">
+          <path d="M3 12l5-5 5 5 7-7"></path>
+          <path d="M14 5h6v6"></path>
+        </svg>
+      </div>
+      <h2 class="brand-name">SKILLTOSCALEUP</h2>
+    </div>
+
+    <form id="loginForm" class="form">
+      <label class="field">
+        <span class="field-label">Email</span>
+        <input type="email" id="email" placeholder="you@company.com" required>
+      </label>
+      <label class="field">
+        <span class="field-label">Password</span>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </label>
+      <button class="btn full" type="submit">Log In</button>
+      <div style="text-align:center;margin-top:12px;">
+        <a href="#" class="muted">Forgot password?</a>
+      </div>
+    </form>
+
+    <p style="text-align:center;margin-top:18px;color:#64748b;font-size:14px;">Demo credentials: <strong>demo@skilltoscaleup.com / demo123</strong></p>
+  </main>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      // simple demo: redirect to dashboard
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SkillToScaleUp — Sales Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">
+      <div class="brand-icon" aria-hidden="true">
+        <!-- simple svg logo -->
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="white" stroke-width="2">
+          <path d="M3 12l5-5 5 5 7-7"></path>
+          <path d="M14 5h6v6"></path>
+        </svg>
+      </div>
+      <span class="brand-name">SKILLTOSCALEUP</span>
+    </div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Sales Dashboard</h1>
+      <p>Track your sales performance with our comprehensive dashboard.</p>
+    </section>
+
+    <section class="metrics">
+      <div class="card metric">
+        <div class="label">Total Sales</div>
+        <div class="value" id="totalSales">$0</div>
+      </div>
+      <div class="card metric">
+        <div class="label">Sales Growth</div>
+        <div class="value" id="growthValue">0%</div>
+        <svg id="sparkline" viewBox="0 0 100 36" class="spark" aria-hidden="true"></svg>
+      </div>
+      <div class="card metric">
+        <div class="label">New Customers</div>
+        <div class="value" id="newCustomers">0</div>
+      </div>
+    </section>
+
+    <section class="charts">
+      <div class="panel">
+        <h3>Sales Data</h3>
+        <svg id="barChart" viewBox="0 0 640 260" class="chart" role="img" aria-label="Monthly sales"></svg>
+        <a class="btn" href="#">Read More</a>
+      </div>
+
+      <aside class="panel small">
+        <h3>Sales by Category</h3>
+        <svg id="pieChart" viewBox="0 0 260 260" class="chart" role="img" aria-label="Category distribution"></svg>
+        <div id="pieLegend" class="legend" aria-hidden="true"></div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © <span id="year"></span> SkillToScaleUp. All rights reserved.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
