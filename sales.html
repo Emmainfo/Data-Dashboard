@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sales Dashboard – Abuja, Nigeria</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">✔️ <strong>NovaSales Hub</strong></div>
+    <nav class="nav-links">
+      <a href="#" >Dashboard</a>
+      <a class="active" href="#" >Sales Reps</a>
+      <a href="#">Leads</a>
+      <a href="#">Targets</a>
+      <a href="#">Reports</a>
+      <a href="#">Settings</a>
+    </nav>
+    <div class="user-controls">
+      <span class="username">Admin</span>
+      <button class="icon-btn" title="Notifications">🔔</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Sales Dashboard – Abuja, Nigeria</h1>
+        <p class="muted">Track and compare the performance of 20 sales reps across the FCT in real time.</p>
+        <div class="buttons">
+          <button class="btn primary" id="reportBtn">View Detailed Report</button>
+          <button class="btn" id="mapBtn">Map View</button>
+        </div>
+      </div>
+      <div class="meta">
+        <div class="meta-card">
+          <div class="meta-label">Total Monthly Sales</div>
+          <div class="meta-value" id="totalSales">₦0</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-label">Average Deal Size</div>
+          <div class="meta-value" id="avgDeal">₦0</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-label">Top Performer</div>
+          <div class="meta-value" id="topPerf">—</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="leaderboard">
+      <h2>Sales Rep Leaderboard</h2>
+      <div class="table-wrap">
+        <table id="repTable">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Name</th>
+              <th>Sales (₦)</th>
+              <th>Deals Closed</th>
+              <th>Conversion Rate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="charts-grid">
+      <div class="chart-box" id="barChart">
+        <h3>Sales by Rep</h3>
+        <svg viewBox="0 0 600 260" preserveAspectRatio="none"></svg>
+      </div>
+      <div class="chart-box" id="trendChart">
+        <h3>Weekly Sales Trend</h3>
+        <svg viewBox="0 0 600 260" preserveAspectRatio="none"></svg>
+      </div>
+      <div class="chart-box" id="mapChart">
+        <h3>Sales Distribution Map</h3>
+        <div class="map-placeholder">[Map Placeholder]</div>
+      </div>
+      <div class="chart-box" id="pieChart">
+        <h3>Lead Source Breakdown</h3>
+        <svg viewBox="0 0 260 260" preserveAspectRatio="xMidYMid meet"></svg>
+        <div class="legend" id="pieLegend"></div>
+      </div>
+    </section>
+
+    <section class="alerts">
+      <h2>Alerts & Notes</h2>
+      <ul id="alertsList">
+        <!-- populated by JS -->
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Powered by NovaSales | <a href="#">Contact Support</a> | <a href="#">Privacy Terms</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
